@@ -1,0 +1,124 @@
+.take {
+    padding-bottom: 140px;
+    position: relative;
+
+    &__title {
+        margin-bottom: 22px;
+    }
+
+    &__descr {
+        max-width: 1110px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 70px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        @include a (laptop) {
+            flex-direction: column;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @include a (laptop) {
+            order: 2;
+        }
+    }
+
+    &__item {
+        background: linear-gradient(90deg, #C3E2DE 27.22%, #CFF1ED 48.89%, #EDFBF9 96.77%);
+        border-radius: 15px;
+        max-width: 650px;
+        width: 100%;
+        padding: 30px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 160px;
+
+        @include a (tablet) {
+            gap: 80px;
+        }
+
+        @include a (mobile) {
+            gap: 30px;
+            flex-direction: column;
+        }
+
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @include a (mobile) {
+                align-items: center;
+            }
+        }
+
+        &-title {
+            font-size: toRem(32);
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        &-descr {
+            font-size: toRem(24);
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        &-btn {
+            background: linear-gradient(180deg, #259385 0%, #159685 100%);
+            box-shadow: 0px 25px 30px rgba(179, 228, 221, 0.3), 0px 9px 24px rgba(26, 127, 114, 0.23);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__image {
+        max-width: 696px;
+        width: 100%;
+
+        @include a (laptop) {
+            order: 1;
+        }
+    }
+
+    &__bg {
+        &-1 {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+
+        &-2 {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &-3 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.hero {
+    padding: 70px 0 680px;
+    background: url(/src/assets/images/hero-bg-2.png) no-repeat center/cover;
+    // background: linear-gradient(331.93deg, #1A7F72 29.76%, #7ADBAE 82.43%);
+    position: relative;
+
+    @include a (tablet-xl) {
+        padding-bottom: 500px;
+    }
+
+    @include a (mobile) {
+        padding-bottom: 400px;
+    }
+
+    &__title {
+        font-family: 'Merienda One', cursive;
+        font-size: toRem(68);
+        font-weight: 400;
+        line-height: 130%;
+        color: $light-color;
+        max-width: 758px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 22px;
+    }
+
+    &__descr {
+        font-size: toRem(24);
+        line-height: 130%;
+        color: rgba(0, 0, 0, 0.5);
+        max-width: 1110px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 30px;
+    }
+
+    &__btn {
+        font-size: toRem(30);
+        font-weight: 700;
+        color: $light-color;
+        text-align: center;
+        width: 300px;
+        line-height: 75px;
+        background: linear-gradient(180deg, #259385 0%, #159685 100%);
+        box-shadow: 0px 20px 40px rgba(21, 113, 101, 0.2);
+        border-radius: 50px;
+        display: block;
+        margin: 0 auto;
+
+        @include a (mobile) {
+            width: 270px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
